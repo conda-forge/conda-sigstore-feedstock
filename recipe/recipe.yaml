@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.1.3"
+  version: "0.1.5"
 
 package:
   name: conda-sigstore
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/c/conda-sigstore/conda_sigstore-${{ version }}.tar.gz
-  sha256: 64d8b6c95de21125daddb0b4a00256ef708f1ca5c5bb774e6bbb9dd2e1a8fadb
+  sha256: 0c0bc9cb0a75821f6b26cbb7f7fd6dfd0ced566fbe554fec180da9b589567016
 
 build:
   number: 0
@@ -27,6 +27,8 @@ requirements:
     - hatch-vcs >=0.2.0
   run:
     - python >=${{ python_min }}
+    - ca-certificates >=2026.10.19
+    - certifi >=2026.10.19
     - conda >=26.5
     - conda-package-handling >=2
     - backports.zstd >=1.0.0
